@@ -28,7 +28,7 @@ app.get('/db-test', async (_req, res, next) => {
 app.use(errorHandler);
 
 // ──────────── Levantar servidor ────────────
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor escuchando en puerto ${PORT}`);
 });
 
@@ -40,7 +40,7 @@ app.use('/api/auth', authRoutes);
 const userRoutes  = require('./routes/users.routes');
 app.use('/api/users', userRoutes);
 
-
+//experiencies
 const expRoutes  = require('./routes/experiences.routes');
 app.use('/api/experiences', expRoutes);
 
